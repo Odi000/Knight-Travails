@@ -45,8 +45,8 @@ class KnightTravails {
 
         function recurse(chess) {
             if (queue[0][0] === end[0] && queue[0][1] === end[1]) {
-                console.log("U gjet!");
-                console.log(queue[0])
+                console.log(`You made it in ${queue[0][2].length} moves.`);
+                console.log(...queue[0][2]);
                 return;
             }
 
@@ -125,6 +125,4 @@ class Knight {
 }
 
 const chess = new KnightTravails();
-console.log(chess);
-console.log(chess.nextLegalMoves([0, 0]));
-console.log(chess.knightMoves([0,0],[1,1]));
+chess.knightMoves([0,0],[6,7]);
